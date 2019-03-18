@@ -1,0 +1,7 @@
+filebeat.config.inputs:
+  path: /usr/share/filebeat/configs/*.yml
+  reload.enabled: true
+  reload.period: 5s
+
+output.logstash:
+  hosts: ["${LOGSTASH_IP}:5044"]
