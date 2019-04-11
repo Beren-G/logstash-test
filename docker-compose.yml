@@ -2,7 +2,7 @@ version: "2"
 services:
   logstash:
     container_name: logstash
-    image: docker.elastic.co/logstash/logstash:6.6.1  
+    image: docker.elastic.co/logstash/logstash:6.7.0  
     ports:
       - "5044:5045"
       - "514:5144"
@@ -11,14 +11,14 @@ services:
     command: >
       --config.reload.automatic
       --path.config /usr/share/logstash/config/pipeline.conf
+      --config.reload.interval 3s
+
     tty: true
-#    environment: 
-#      - TERM=xterm-256color`
   filebeat:
     container_name: filebeat 
-    image: docker.elastic.co/beats/filebeat:6.6.1
+    image: docker.elastic.co/beats/filebeat:6.7.0
     volumes:
-      - ./filebeat-container/test-logs:/opt/testlog/:ro
+      - ./my-test-logs:/opt/testlog/:ro
       - ./filebeat-container/filebeat.docker.yml:/usr/share/filebeat/filebeat.yml:ro
       - ./my-filebeat-inputs/:/usr/share/filebeat/configs:ro
     depends_on:
@@ -26,7 +26,7 @@ services:
     environment:
       - LOGSTASH_IP=${LOGSTASH_IP}
     command: >
+      -e -v -d "*"
       -E "name=testbeat"
-      -E "inputs.paths['/opt/testlog/testlog.log']"
       -E "outputs.logstash.hosts['${LOGSTASH_IP}:5044']"
       --path.config /usr/share/filebeat/

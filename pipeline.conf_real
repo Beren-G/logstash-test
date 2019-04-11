@@ -9,10 +9,10 @@ output {
 
 
 filter {
-	# get log file name
+	 get log file name
 	grok {
-	        match => { "source" => "^(.+)\/(?<log_file>[^\/]+)$" }
-	        #overwrite => [ "source" ]
+	        match => { "source" => "^(.+)\/(?<source>[^\/]+)$" }
+	        overwrite => [ "source" ]
 	}
 
 	# store un-parsed message in raw_message for testing
@@ -36,8 +36,9 @@ filter {
 		}
 		mutate {
 			rename => { "dynamic_json_field" => "%{function}" }
-    		}
-		}	
+			add_tag => [ "JSON found" ]
+    	}
+	}	
 
 	# custom fields
 	if [message] =~ /Setting player key to:/ {

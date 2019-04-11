@@ -1,0 +1,2312 @@
+[info] applicationImpl.cpp@102 loadConfig Active config:
+{
+    "Activation": {
+        "activationDurationOverride": null,
+        "drawWhenInactive": false,
+        "hideWindowWhenInactive": false,
+        "minStealFocusInterval": 0.1,
+        "queryNowPlaying": {
+            "activateCount": 3,
+            "deactivateCount": 3,
+            "delay": 1,
+            "interval": 1
+        },
+        "reactivationInterval": null,
+        "stealFocusWhenActive": false,
+        "stealFocusWhenActived": true
+    },
+    "App": {
+        "filewatcher.enable": false
+    },
+    "Broadsign": {
+        "Listener": {
+            "ActivateRequest": {
+                "failureResponse": {
+                    "outcome": "activationFailed",
+                    "type": "activationResponse",
+                    "version": 1
+                },
+                "successResponse": {
+                    "outcome": "activating",
+                    "type": "activationResponse",
+                    "version": 1
+                }
+            },
+            "listenPort": "1085",
+            "maxMessageBodySize": 512,
+            "repeatIntervalInMilliseconds": 100,
+            "retryIntervalInMilliseconds": 100
+        },
+        "Player": {
+            "QueryNowPlaying": {
+                "tcpSocketMessage": "<rc version=\"2\" id=\"11\" action=\"now_playing\" />\r\n\r\n",
+                "webSocketMessage": {
+                    "rc": {
+                        "action": "now_playing",
+                        "id": "11",
+                        "version": "2"
+                    }
+                }
+            },
+            "Stop": {
+                "forcedErrorMessage": null,
+                "forcedOutcome": null,
+                "forcedResponse": null,
+                "tcpSocketMessage": "<rc version=\"1\" id=\"1\" action=\"stop\" frame_id=\"0\" />\r\n\r\n",
+                "webSocketMessage": {
+                    "rc": {
+                        "action": "stop",
+                        "id": "1",
+                        "version": "1"
+                    }
+                }
+            },
+            "TriggerWayfinding": {
+                "forcedErrorMessage": null,
+                "forcedOutcome": null,
+                "forcedResponse": null,
+                "tcpSocketMessage": "<rc version=\"1\" id=\"1\" action=\"trigger\" trigger_category_id=\"143308\" duration=\"0\" custom_param=\"123456\" />\r\n\r\n",
+                "webSocketMessage": {
+                    "rc": {
+                        "action": "trigger",
+                        "custom_param": 123456,
+                        "duration": 0,
+                        "id": "1",
+                        "trigger_category_id": "143308",
+                        "version": "1"
+                    }
+                }
+            },
+            "forcedErrorMessage": null,
+            "forcedOutcome": null,
+            "forcedResponse": null,
+            "host": "localhost",
+            "tcpSocketPort": "2324",
+            "useWebSocket": true,
+            "webSocketPort": "2326"
+        }
+    },
+    "CDAG": {
+        "graphDump": {
+            "directory": null,
+            "dumpOnChange": false,
+            "dumpOnLoad": true,
+            "enable": false
+        },
+        "maxNodeEvaluationRetries": 100
+    },
+    "CTA": {
+        "TriggerWayfinding": {
+            "eventId": "map",
+            "filePath": "/opt/broadsign/suite/bsp/share/bsp/sync/datasets/activateWayfinding.json",
+            "retryDelay": 0.5
+        },
+        "animation": {
+            "firstPressMS": 3000,
+            "pressLengthMS": 200,
+            "secondPressMS": 3400
+        },
+        "enable": false,
+        "imageFiles": {
+            "BG": "HY_CTA_BG.png",
+            "Hover": "HY_CTA_Hand_Hover.png",
+            "Pressed": "HY_CTA_Hand_Pressed.png"
+        },
+        "touchEverywhere": true
+    },
+    "Camera": {
+        "FakeOrthographic": {
+            "clipPlanes": [
+                100,
+                10000
+            ],
+            "vfov": 80
+        }
+    },
+    "Canvas": {
+        "antialiasing": 4,
+        "clearColour": [
+            0.05,
+            0.15,
+            0.05,
+            0.0
+        ],
+        "depth": {
+            "enable": true,
+            "numBits": 24
+        },
+        "numChannels": 3,
+        "screenCapture": {
+            "enable": true,
+            "extension": "jpg"
+        },
+        "shouldClear": false
+    },
+    "Config": {
+        "enableConfigWatcher": false
+    },
+    "Content": {
+        "assetsDirectory": "/var/assetpuller/local",
+        "schedule": "/var/assetpuller/local/schedules/ready/schedule.json"
+    },
+    "Devices": {
+        "Mouse": {
+            "enable": true
+        },
+        "Touch": {
+            "Overlay": {
+                "enable": true
+            },
+            "enable": false,
+            "origin": "bottomLeft"
+        }
+    },
+    "DotsAnimation": {
+        "Matte": {
+            "marqueeNE": "DotsAnimation/marqueeNE_building10.png",
+            "marqueeSE": "DotsAnimation/marqueeSE_building10.png",
+            "totemExterior": "DotsAnimation/totemExterior_building10.png",
+            "totemInterior": "DotsAnimation/totemInterior_building10.png",
+            "vitrine2x4": "DotsAnimation/vitrine2x4_building10.png",
+            "vitrine3x2": "DotsAnimation/vitrine3x2_building10.png",
+            "vitrine3x3": "DotsAnimation/vitrine3x3_building10.png"
+        },
+        "texture": "DotsAnimation/128Squares.png"
+    },
+    "FFMpeg": {
+        "imageBuffers": 8,
+        "numThreads": 8,
+        "sleepDefault": 5
+    },
+    "FSLogo": {
+        "imageAspectRatio": 4.201,
+        "imagePath": "textures/FramestoreLogo.png",
+        "relativePositionBottomRight": [
+            0.65,
+            0.04
+        ],
+        "relativeSizeToWidth": 0.3
+    },
+    "FSPlayerWorld": {
+        "enableFrameDropLog": false
+    },
+    "Feedback": {
+        "colour": {
+            "priorityValue": {
+                "filename": "feedback.json",
+                "path": [
+                    "Feedback"
+                ],
+                "priority": 0
+            },
+            "type": "col4f",
+            "value": [
+                1,
+                1,
+                1,
+                0.93
+            ]
+        },
+        "enabled": {
+            "priorityValue": {
+                "filename": "feedback.json",
+                "path": [
+                    "Feedback"
+                ],
+                "priority": 0
+            },
+            "type": "bool",
+            "value": false
+        },
+        "index": "translation",
+        "scale": {
+            "priorityValue": {
+                "filename": "feedback.json",
+                "path": [
+                    "Feedback"
+                ],
+                "priority": 0
+            },
+            "range": [
+                0,
+                30
+            ],
+            "type": "vec3",
+            "value": [
+                1,
+                1,
+                1
+            ]
+        },
+        "translation": {
+            "priorityValue": {
+                "filename": "feedback.json",
+                "path": [
+                    "Feedback"
+                ],
+                "priority": 0
+            },
+            "range": [
+                0,
+                30
+            ],
+            "type": "vec3",
+            "value": [
+                0,
+                0,
+                0
+            ]
+        }
+    },
+    "Fonts": {
+        "black": "fonts/AvenirLTStd-Black.otf",
+        "blackOblique": "fonts/AvenirLTStd-BlackOblique.otf",
+        "book": "fonts/AvenirLTStd-Book.otf",
+        "bookOblique": "fonts/AvenirLTStd-BookOblique.otf",
+        "dejaVuSansMono": "fonts/DEJAVUSANSMONO.TTF",
+        "dejaVuSansMonoBold": "fonts/DEJAVUSANSMONO-BOLD.TTF",
+        "dejaVuSansMonoItalic": "fonts/DEJAVUSANSMONO-OBLIQUE.TTF",
+        "funFacts": "fonts/CaslonVThin-Italic.ttf",
+        "heavy": "fonts/AvenirLTStd-Heavy.otf",
+        "heavyOblique": "fonts/AvenirLTStd-HeavyOblique.otf",
+        "light": "fonts/AvenirLTStd-Light.otf",
+        "lightOblique": "fonts/AvenirLTStd-LightOblique.otf",
+        "medium": "fonts/AvenirLTStd-Medium.otf",
+        "mediumOblique": "fonts/AvenirLTStd-MediumOblique.otf",
+        "oblique": "fonts/AvenirLTStd-Oblique.otf",
+        "roman": "fonts/AvenirLTStd-Roman.otf"
+    },
+    "FunFacts": {
+        "Blinds": {
+            "LineHeightMagicNumber": {
+                "body": 1.17,
+                "header": 1.1
+            },
+            "duration": 2,
+            "imageDimensions": {
+                "totemExterior": [
+                    1080,
+                    675
+                ]
+            },
+            "imagePosition": {
+                "marqueeNE": [
+                    0,
+                    2475
+                ],
+                "marqueeSE": [
+                    0,
+                    2200
+                ],
+                "totemExterior": [
+                    0,
+                    1145
+                ],
+                "totemInterior": [
+                    0,
+                    2465
+                ],
+                "vitrine2x4": [
+                    0,
+                    2845
+                ],
+                "vitrine3x2": [
+                    0,
+                    1485
+                ],
+                "vitrine3x3": [
+                    0,
+                    1400
+                ]
+            },
+            "marqueeNE": {
+                "BodyText": {
+                    "fontSize": 77,
+                    "fontWeight": "light",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "HeaderText": {
+                    "fontSize": 205,
+                    "fontWeight": "funFacts",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "bodyTextDimensions": [
+                    820,
+                    1524
+                ],
+                "bodyTextPosition": [
+                    662,
+                    1764
+                ],
+                "headerTextDimensions": [
+                    778,
+                    660
+                ],
+                "headerTextPosition": [
+                    651,
+                    2568
+                ],
+                "imageDimensions": [
+                    816,
+                    3888
+                ],
+                "imagePosition": [
+                    -380,
+                    0
+                ],
+                "numBlocks": [
+                    5,
+                    8
+                ]
+            },
+            "marqueeSE": {
+                "BodyText": {
+                    "fontSize": 64,
+                    "fontWeight": "light",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "HeaderText": {
+                    "fontSize": 185,
+                    "fontWeight": "funFacts",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "bodyTextDimensions": [
+                    636,
+                    1448
+                ],
+                "bodyTextPosition": [
+                    1264,
+                    1624
+                ],
+                "headerTextDimensions": [
+                    778,
+                    660
+                ],
+                "headerTextPosition": [
+                    1248,
+                    2352
+                ],
+                "imageDimensions": [
+                    746,
+                    3888
+                ],
+                "imagePosition": [
+                    308,
+                    0
+                ],
+                "numBlocks": [
+                    3,
+                    6
+                ]
+            },
+            "tabThickness": 1,
+            "totemExterior": {
+                "BodyText": {
+                    "fontSize": 50.5,
+                    "fontWeight": "light",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "HeaderText": {
+                    "fontSize": 160,
+                    "fontWeight": "funFacts",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "bodyTextDimensions": [
+                    528,
+                    936
+                ],
+                "bodyTextPosition": [
+                    340,
+                    1038
+                ],
+                "headerTextDimensions": [
+                    534,
+                    496
+                ],
+                "headerTextPosition": [
+                    340,
+                    1716
+                ],
+                "imageDimensions": [
+                    420,
+                    1920
+                ],
+                "imagePosition": [
+                    -160,
+                    0
+                ],
+                "numBlocks": [
+                    3,
+                    6
+                ]
+            },
+            "totemInterior": {
+                "BodyText": {
+                    "fontSize": 101,
+                    "fontWeight": "light",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "HeaderText": {
+                    "fontSize": 320,
+                    "fontWeight": "funFacts",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "bodyTextDimensions": [
+                    1006,
+                    1872
+                ],
+                "bodyTextPosition": [
+                    700,
+                    2076
+                ],
+                "headerTextDimensions": [
+                    1068,
+                    992
+                ],
+                "headerTextPosition": [
+                    700,
+                    3432
+                ],
+                "imageDimensions": [
+                    840,
+                    3840
+                ],
+                "imagePosition": [
+                    -320,
+                    0
+                ],
+                "numBlocks": [
+                    3,
+                    6
+                ]
+            },
+            "vitrine2x4": {
+                "BodyText": {
+                    "fontSize": 115,
+                    "fontWeight": "light",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "HeaderText": {
+                    "fontSize": 260,
+                    "fontWeight": "funFacts",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "bodyTextDimensions": [
+                    1200,
+                    1836
+                ],
+                "bodyTextPosition": [
+                    2176,
+                    2076
+                ],
+                "headerTextDimensions": [
+                    1488,
+                    900
+                ],
+                "headerTextPosition": [
+                    2156,
+                    3132
+                ],
+                "imageDimensions": [
+                    1626,
+                    4320
+                ],
+                "imagePosition": [
+                    -100,
+                    0
+                ],
+                "numBlocks": [
+                    3,
+                    6
+                ]
+            },
+            "vitrine3x2": {
+                "BodyText": {
+                    "fontSize": 115,
+                    "fontWeight": "light",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "HeaderText": {
+                    "fontSize": 260,
+                    "fontWeight": "funFacts",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "bodyTextDimensions": [
+                    1400,
+                    820
+                ],
+                "bodyTextPosition": [
+                    4000,
+                    952
+                ],
+                "headerTextDimensions": [
+                    1396,
+                    844
+                ],
+                "headerTextPosition": [
+                    4000,
+                    2004
+                ],
+                "imageDimensions": [
+                    3380,
+                    2160
+                ],
+                "imagePosition": [
+                    200,
+                    0
+                ],
+                "numBlocks": [
+                    5,
+                    8
+                ]
+            },
+            "vitrine3x3": {
+                "BodyText": {
+                    "fontSize": 77,
+                    "fontWeight": "light",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "HeaderText": {
+                    "fontSize": 173.33,
+                    "fontWeight": "funFacts",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "bodyTextDimensions": [
+                    964,
+                    760
+                ],
+                "bodyTextPosition": [
+                    2576,
+                    928
+                ],
+                "headerTextDimensions": [
+                    864,
+                    568
+                ],
+                "headerTextPosition": [
+                    2568,
+                    1816
+                ],
+                "imageDimensions": [
+                    2056,
+                    2160
+                ],
+                "imagePosition": [
+                    150,
+                    0
+                ],
+                "numBlocks": [
+                    5,
+                    8
+                ]
+            }
+        },
+        "BlockAnimation": {
+            "bias": 0.4125,
+            "gain": 0.4,
+            "lengthFrac": 0.65
+        },
+        "Flipboard": {
+            "LineHeightMagicNumber": {
+                "body": 1.17,
+                "header": 0.9
+            },
+            "duration": 2,
+            "marqueeNE": {
+                "BodyText": {
+                    "fontSize": 96,
+                    "fontWeight": "light",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "HeaderText": {
+                    "fontSize": 360,
+                    "fontWeight": "funFacts",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "bodyTextDimensions": [
+                    1116,
+                    950
+                ],
+                "bodyTextPosition": [
+                    310,
+                    1088
+                ],
+                "headerTextDimensions": [
+                    1220,
+                    950
+                ],
+                "headerTextPosition": [
+                    295,
+                    2235
+                ],
+                "imageDimensions": [
+                    1792,
+                    1328
+                ],
+                "imagePosition": [
+                    0,
+                    3703
+                ],
+                "numTabs": [
+                    6,
+                    4
+                ]
+            },
+            "marqueeSE": {
+                "BodyText": {
+                    "fontSize": 64,
+                    "fontWeight": "light",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "HeaderText": {
+                    "fontSize": 264,
+                    "fontWeight": "funFacts",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "bodyTextDimensions": [
+                    930,
+                    1524
+                ],
+                "bodyTextPosition": [
+                    1258,
+                    1732
+                ],
+                "headerTextDimensions": [
+                    930,
+                    1524
+                ],
+                "headerTextPosition": [
+                    115,
+                    1732
+                ],
+                "imageDimensions": [
+                    2304,
+                    1188
+                ],
+                "imagePosition": [
+                    0,
+                    3188
+                ],
+                "numTabs": [
+                    6,
+                    3
+                ]
+            },
+            "tabThickness": 10,
+            "totemExterior": {
+                "BodyText": {
+                    "fontSize": 50.5,
+                    "fontWeight": "light",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "HeaderText": {
+                    "fontSize": 160,
+                    "fontWeight": "funFacts",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "bodyTextDimensions": [
+                    824,
+                    318
+                ],
+                "bodyTextPosition": [
+                    126,
+                    424
+                ],
+                "headerTextDimensions": [
+                    824,
+                    504
+                ],
+                "headerTextPosition": [
+                    114,
+                    1032
+                ],
+                "imageDimensions": [
+                    1080,
+                    687
+                ],
+                "imagePosition": [
+                    0,
+                    1878
+                ],
+                "numTabs": [
+                    6,
+                    4
+                ]
+            },
+            "totemInterior": {
+                "BodyText": {
+                    "fontSize": 101,
+                    "fontWeight": "light",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "HeaderText": {
+                    "fontSize": 320,
+                    "fontWeight": "funFacts",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "bodyTextDimensions": [
+                    1648,
+                    636
+                ],
+                "bodyTextPosition": [
+                    252,
+                    848
+                ],
+                "headerTextDimensions": [
+                    1648,
+                    1008
+                ],
+                "headerTextPosition": [
+                    228,
+                    2064
+                ],
+                "imageDimensions": [
+                    2160,
+                    1374
+                ],
+                "imagePosition": [
+                    0,
+                    3756
+                ],
+                "numTabs": [
+                    6,
+                    3
+                ]
+            },
+            "vitrine2x4": {
+                "BodyText": {
+                    "fontSize": 115,
+                    "fontWeight": "light",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "HeaderText": {
+                    "fontSize": 318,
+                    "fontWeight": "funFacts",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "bodyTextDimensions": [
+                    1700,
+                    2214
+                ],
+                "bodyTextPosition": [
+                    1966,
+                    2478
+                ],
+                "headerTextDimensions": [
+                    1092,
+                    996
+                ],
+                "headerTextPosition": [
+                    436,
+                    2478
+                ],
+                "imageDimensions": [
+                    3840,
+                    1426
+                ],
+                "imagePosition": [
+                    0,
+                    4080
+                ],
+                "numTabs": [
+                    7,
+                    3
+                ]
+            },
+            "vitrine3x2": {
+                "BodyText": {
+                    "fontSize": 115,
+                    "fontWeight": "light",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "HeaderText": {
+                    "fontSize": 318,
+                    "fontWeight": "funFacts",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "bodyTextDimensions": [
+                    1572,
+                    1068
+                ],
+                "bodyTextPosition": [
+                    2112,
+                    1400
+                ],
+                "headerTextDimensions": [
+                    1080,
+                    992
+                ],
+                "headerTextPosition": [
+                    428,
+                    1400
+                ],
+                "imageDimensions": [
+                    5760,
+                    564
+                ],
+                "imagePosition": [
+                    0,
+                    2160
+                ],
+                "numTabs": [
+                    12,
+                    2
+                ]
+            },
+            "vitrine3x3": {
+                "BodyText": {
+                    "fontSize": 77,
+                    "fontWeight": "light",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "HeaderText": {
+                    "fontSize": 212,
+                    "fontWeight": "funFacts",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "bodyTextDimensions": [
+                    1060,
+                    720
+                ],
+                "bodyTextPosition": [
+                    1404,
+                    920
+                ],
+                "headerTextDimensions": [
+                    732,
+                    680
+                ],
+                "headerTextPosition": [
+                    276,
+                    920
+                ],
+                "imageDimensions": [
+                    3840,
+                    900
+                ],
+                "imagePosition": [
+                    0,
+                    1980
+                ],
+                "numTabs": [
+                    9,
+                    3
+                ]
+            }
+        },
+        "TextAnimation": {
+            "bias": 0.7,
+            "delay": 0.08,
+            "gain": 0.35,
+            "length": 0.88
+        },
+        "Waves": {
+            "LineHeightMagicNumber": {
+                "body": 1.17,
+                "header": 0.9
+            },
+            "duration": 3,
+            "marqueeNE": {
+                "BodyText": {
+                    "fontSize": 96,
+                    "fontWeight": "light",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "HeaderText": {
+                    "fontSize": 360,
+                    "fontWeight": "funFacts",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "bodyTextDimensions": [
+                    1116,
+                    950
+                ],
+                "bodyTextPosition": [
+                    310,
+                    1088
+                ],
+                "headerTextDimensions": [
+                    1220,
+                    950
+                ],
+                "headerTextPosition": [
+                    295,
+                    2235
+                ],
+                "imageDimensions": [
+                    1792,
+                    1328
+                ],
+                "imagePosition": [
+                    0,
+                    3703
+                ]
+            },
+            "marqueeSE": {
+                "BodyText": {
+                    "fontSize": 64,
+                    "fontWeight": "light",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "HeaderText": {
+                    "fontSize": 264,
+                    "fontWeight": "funFacts",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "bodyTextDimensions": [
+                    930,
+                    1524
+                ],
+                "bodyTextPosition": [
+                    1258,
+                    1732
+                ],
+                "headerTextDimensions": [
+                    930,
+                    1524
+                ],
+                "headerTextPosition": [
+                    115,
+                    1732
+                ],
+                "imageDimensions": [
+                    2304,
+                    1188
+                ],
+                "imagePosition": [
+                    0,
+                    3188
+                ]
+            },
+            "numWaves": 5,
+            "totemExterior": {
+                "BodyText": {
+                    "fontSize": 50.5,
+                    "fontWeight": "light",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "HeaderText": {
+                    "fontSize": 160,
+                    "fontWeight": "funFacts",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "bodyTextDimensions": [
+                    824,
+                    390
+                ],
+                "bodyTextPosition": [
+                    126,
+                    1160
+                ],
+                "headerTextDimensions": [
+                    824,
+                    504
+                ],
+                "headerTextPosition": [
+                    114,
+                    1776
+                ],
+                "imageDimensions": [
+                    1080,
+                    600
+                ],
+                "imagePosition": [
+                    0,
+                    666
+                ]
+            },
+            "totemInterior": {
+                "BodyText": {
+                    "fontSize": 101,
+                    "fontWeight": "light",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "HeaderText": {
+                    "fontSize": 320,
+                    "fontWeight": "funFacts",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "bodyTextDimensions": [
+                    1648,
+                    780
+                ],
+                "bodyTextPosition": [
+                    252,
+                    2320
+                ],
+                "headerTextDimensions": [
+                    1648,
+                    1008
+                ],
+                "headerTextPosition": [
+                    228,
+                    3552
+                ],
+                "imageDimensions": [
+                    2160,
+                    1200
+                ],
+                "imagePosition": [
+                    0,
+                    1332
+                ]
+            },
+            "vitrine2x4": {
+                "BodyText": {
+                    "fontSize": 115,
+                    "fontWeight": "light",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "HeaderText": {
+                    "fontSize": 318,
+                    "fontWeight": "funFacts",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "bodyTextDimensions": [
+                    1700,
+                    2214
+                ],
+                "bodyTextPosition": [
+                    1966,
+                    2478
+                ],
+                "headerTextDimensions": [
+                    1092,
+                    996
+                ],
+                "headerTextPosition": [
+                    436,
+                    2478
+                ],
+                "imageDimensions": [
+                    3840,
+                    1426
+                ],
+                "imagePosition": [
+                    0,
+                    4080
+                ]
+            },
+            "vitrine3x2": {
+                "BodyText": {
+                    "fontSize": 115,
+                    "fontWeight": "light",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "HeaderText": {
+                    "fontSize": 318,
+                    "fontWeight": "funFacts",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "bodyTextDimensions": [
+                    1572,
+                    1068
+                ],
+                "bodyTextPosition": [
+                    2112,
+                    1400
+                ],
+                "headerTextDimensions": [
+                    1080,
+                    992
+                ],
+                "headerTextPosition": [
+                    428,
+                    1400
+                ],
+                "imageDimensions": [
+                    5760,
+                    564
+                ],
+                "imagePosition": [
+                    0,
+                    2160
+                ]
+            },
+            "vitrine3x3": {
+                "BodyText": {
+                    "fontSize": 77,
+                    "fontWeight": "light",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "HeaderText": {
+                    "fontSize": 212,
+                    "fontWeight": "funFacts",
+                    "horizontalAlignment": "Left",
+                    "verticalAlignment": "Top"
+                },
+                "bodyTextDimensions": [
+                    1060,
+                    720
+                ],
+                "bodyTextPosition": [
+                    1404,
+                    920
+                ],
+                "headerTextDimensions": [
+                    732,
+                    680
+                ],
+                "headerTextPosition": [
+                    276,
+                    920
+                ],
+                "imageDimensions": [
+                    3840,
+                    900
+                ],
+                "imagePosition": [
+                    0,
+                    1980
+                ]
+            }
+        }
+    },
+    "HUD": {
+        "cellPadding": {
+            "type": "vec4",
+            "value": [
+                10,
+                10,
+                10,
+                10
+            ]
+        },
+        "enable": {
+            "comment": "If the HUD is disabled on app launch it wont initialise at all.",
+            "type": "bool",
+            "value": true
+        },
+        "font": "fonts/AvenirLTStd-Black.otf",
+        "fontSize": 14,
+        "index": "cellPadding",
+        "key": "h",
+        "position": [
+            20,
+            40
+        ],
+        "size": [
+            800,
+            1000
+        ],
+        "spacing": 20
+    },
+    "ImageWithText": {
+        "Animation": {
+            "bias": 0.7,
+            "delay": 0.08,
+            "gain": 0.35,
+            "length": 0.88
+        },
+        "BoldFont": {
+            "header": "heavy",
+            "subHeaderAndBody": "heavy"
+        },
+        "Gradient": {
+            "Animation": {
+                "length": 2.0
+            },
+            "filePath": "blob_16bit.png"
+        },
+        "LineHeightMagicNumber": {
+            "body": 1.17,
+            "header": 1.1,
+            "subHeader": 1.17
+        },
+        "NormalFont": {
+            "body": "light",
+            "header": "light",
+            "subHeader": "light"
+        },
+        "TopAndBottomGutter": 150,
+        "marqueeNE": {
+            "Body": {
+                "fontSize": 96,
+                "horizontalAlignment": "Left",
+                "verticalAlignment": "Top"
+            },
+            "DotsAnimation": {
+                "frequency": 0.028
+            },
+            "Header": {
+                "fontSize": 200,
+                "horizontalAlignment": "Left",
+                "verticalAlignment": "Bottom"
+            },
+            "SubHeader": {
+                "fontSize": 96,
+                "horizontalAlignment": "Left",
+                "lineDimensions": [
+                    100,
+                    3
+                ],
+                "marginBottom": 100,
+                "verticalAlignment": "Top"
+            },
+            "gutter": 150,
+            "margin": [
+                3180,
+                1461,
+                3020,
+                330
+            ]
+        },
+        "marqueeSE": {
+            "Body": {
+                "fontSize": 64,
+                "horizontalAlignment": "Left",
+                "verticalAlignment": "Top"
+            },
+            "DotsAnimation": {
+                "frequency": 0.028
+            },
+            "Header": {
+                "fontSize": 133,
+                "horizontalAlignment": "Left",
+                "verticalAlignment": "Bottom"
+            },
+            "SubHeader": {
+                "fontSize": 64,
+                "horizontalAlignment": "Left",
+                "lineDimensions": [
+                    200,
+                    6
+                ],
+                "marginBottom": 100,
+                "verticalAlignment": "Top"
+            },
+            "gutter": 150,
+            "margin": [
+                2756,
+                2226,
+                2635,
+                1232
+            ]
+        },
+        "totemExterior": {
+            "Body": {
+                "fontSize": 49,
+                "horizontalAlignment": "Left",
+                "verticalAlignment": "Top"
+            },
+            "DotsAnimation": {
+                "frequency": 0.028
+            },
+            "Header": {
+                "fontSize": 105,
+                "horizontalAlignment": "Left",
+                "verticalAlignment": "Bottom"
+            },
+            "SubHeader": {
+                "fontSize": 51,
+                "horizontalAlignment": "Left",
+                "lineDimensions": [
+                    100,
+                    3
+                ],
+                "marginBottom": 50,
+                "verticalAlignment": "Top"
+            },
+            "gutter": 150,
+            "margin": [
+                1580,
+                930,
+                1480,
+                150
+            ]
+        },
+        "totemInterior": {
+            "Body": {
+                "fontSize": 98,
+                "horizontalAlignment": "Left",
+                "verticalAlignment": "Top"
+            },
+            "DotsAnimation": {
+                "frequency": 0.028
+            },
+            "Header": {
+                "fontSize": 210,
+                "horizontalAlignment": "Left",
+                "verticalAlignment": "Bottom"
+            },
+            "SubHeader": {
+                "fontSize": 102,
+                "horizontalAlignment": "Left",
+                "lineDimensions": [
+                    200,
+                    6
+                ],
+                "marginBottom": 100,
+                "verticalAlignment": "Top"
+            },
+            "gutter": 150,
+            "margin": [
+                3160,
+                2010,
+                2960,
+                150
+            ]
+        },
+        "vitrine2x4": {
+            "Body": {
+                "fontSize": 115,
+                "horizontalAlignment": "Left",
+                "verticalAlignment": "Top"
+            },
+            "DotsAnimation": {
+                "frequency": 0.0085
+            },
+            "Header": {
+                "fontSize": 190,
+                "horizontalAlignment": "Left",
+                "verticalAlignment": "Bottom"
+            },
+            "SubHeader": {
+                "fontSize": 112,
+                "horizontalAlignment": "Left",
+                "lineDimensions": [
+                    200,
+                    6
+                ],
+                "marginBottom": 115,
+                "verticalAlignment": "Top"
+            },
+            "gutter": 150,
+            "margin": [
+                3336,
+                1793,
+                3160,
+                140
+            ]
+        },
+        "vitrine3x2": {
+            "Body": {
+                "fontSize": 115,
+                "horizontalAlignment": "Left",
+                "verticalAlignment": "Top"
+            },
+            "DotsAnimation": {
+                "frequency": 0.018
+            },
+            "Header": {
+                "fontSize": 190,
+                "horizontalAlignment": "Left",
+                "verticalAlignment": "Bottom"
+            },
+            "SubHeader": {
+                "fontSize": 115,
+                "horizontalAlignment": "Left",
+                "lineDimensions": [
+                    200,
+                    6
+                ],
+                "marginBottom": 100,
+                "verticalAlignment": "Top"
+            },
+            "gutter": 150,
+            "margin": [
+                1276,
+                1768,
+                1010,
+                120
+            ]
+        },
+        "vitrine3x3": {
+            "Body": {
+                "fontSize": 77,
+                "horizontalAlignment": "Left",
+                "verticalAlignment": "Top"
+            },
+            "DotsAnimation": {
+                "frequency": 0.028
+            },
+            "Header": {
+                "fontSize": 127,
+                "horizontalAlignment": "Left",
+                "verticalAlignment": "Bottom"
+            },
+            "SubHeader": {
+                "fontSize": 77,
+                "horizontalAlignment": "Left",
+                "lineDimensions": [
+                    200,
+                    6
+                ],
+                "marginBottom": 100,
+                "verticalAlignment": "Top"
+            },
+            "gutter": 150,
+            "margin": [
+                1570,
+                3760,
+                1390,
+                2660
+            ]
+        }
+    },
+    "InfoOverlay": {
+        "Label": {
+            "fillColour": [
+                0,
+                0.8,
+                0,
+                1
+            ],
+            "fontName": "dejaVuSansMonoBold",
+            "fontSize": 12,
+            "strokeColour": null
+        },
+        "PlaybackState": {
+            "fillColour": null,
+            "fontName": "dejaVuSansMono",
+            "fontSize": 20,
+            "strokeColour": null
+        },
+        "Title": {
+            "fillColour": [
+                0,
+                0.8,
+                0,
+                1
+            ],
+            "fontName": "dejaVuSansMonoBold",
+            "fontSize": 16,
+            "strokeColour": null
+        },
+        "Value": {
+            "fillColour": [
+                0.2,
+                0.8,
+                0.2,
+                1
+            ],
+            "fontName": "dejaVuSansMono",
+            "fontSize": 12,
+            "strokeColour": null
+        }
+    },
+    "InfoShot": {
+        "backgroundImagePrefix": "infoBackground",
+        "template": {
+            "attributes": {
+                "default": {
+                    "backgroundColor": "#000000",
+                    "backgroundColorOpacity": 0,
+                    "bodyText": "",
+                    "bodyTextColor": "#EF0D0D",
+                    "bodyTextColorOpacity": 1,
+                    "bodyTextSize": 118,
+                    "crossfadeDuration": 4,
+                    "duration": 5,
+                    "headerText": "Info",
+                    "headerTextColor": "#00FF00",
+                    "headerTextColorOpacity": 1,
+                    "headerTextSize": 150,
+                    "incomingTransitionType": "Crossfade",
+                    "overlayColor": "#000000",
+                    "overlayColorOpacity": 0.8,
+                    "subHeaderText": "",
+                    "subHeaderTextColor": "#FF0000",
+                    "subHeaderTextColorOpacity": 1,
+                    "subHeaderTextSize": 120,
+                    "textPosition": "Bottom"
+                }
+            },
+            "type": "HYEditImageWithText"
+        }
+    },
+    "LogOverlay": {
+        "alpha": 0.55,
+        "fontSize": 10,
+        "pos": [
+            0,
+            0
+        ],
+        "scale": [
+            1920,
+            1080
+        ]
+    },
+    "Navbar": {
+        "TriggerWayfinding": {
+            "filePath": "/opt/broadsign/suite/bsp/share/bsp/sync/datasets/activateWayfinding.json"
+        },
+        "enable": false,
+        "filePath": "/var/intersection/navbar/navbar.json"
+    },
+    "Overlays": {
+        "fadeInLength": 2.0,
+        "fadeOutLength": 2.0
+    },
+    "PlaybackState": {
+        "logger": {
+            "config": "playbackStateLogger.ini"
+        }
+    },
+    "PlayerTypes": {
+        "marqueeNE": {
+            "contentDimensions": [
+                1792,
+                3888
+            ],
+            "contentMapping": [
+                {
+                    "fromDimensions": [
+                        1792,
+                        3888
+                    ],
+                    "fromPosition": [
+                        0,
+                        0
+                    ],
+                    "toDimensions": [
+                        1792,
+                        3888
+                    ],
+                    "toPosition": [
+                        0,
+                        0
+                    ]
+                }
+            ],
+            "contentPosition": [
+                0,
+                0
+            ],
+            "name": "Marquee NE",
+            "windowDimensions": [
+                1920,
+                4104
+            ],
+            "windowPosition": [
+                0,
+                0
+            ]
+        },
+        "marqueeSE": {
+            "contentDimensions": [
+                2304,
+                3456
+            ],
+            "contentMapping": [
+                {
+                    "fromDimensions": [
+                        1152,
+                        3456
+                    ],
+                    "fromPosition": [
+                        0,
+                        0
+                    ],
+                    "toDimensions": [
+                        1152,
+                        3456
+                    ],
+                    "toPosition": [
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "fromDimensions": [
+                        1152,
+                        3456
+                    ],
+                    "fromPosition": [
+                        1152,
+                        0
+                    ],
+                    "toDimensions": [
+                        1152,
+                        3456
+                    ],
+                    "toPosition": [
+                        1920,
+                        0
+                    ]
+                }
+            ],
+            "contentPosition": [
+                0,
+                0
+            ],
+            "name": "Marquee SE",
+            "windowDimensions": [
+                3840,
+                4176
+            ],
+            "windowPosition": [
+                0,
+                0
+            ]
+        },
+        "totemExterior": {
+            "contentDimensions": [
+                1080,
+                1920
+            ],
+            "contentPosition": [
+                0,
+                0
+            ],
+            "name": "Exterior Totem",
+            "windowDimensions": [
+                1080,
+                1920
+            ],
+            "windowPosition": [
+                0,
+                0
+            ]
+        },
+        "totemInterior": {
+            "CTA": {
+                "enable": true
+            },
+            "contentDimensions": [
+                2160,
+                3840
+            ],
+            "contentPosition": [
+                0,
+                0
+            ],
+            "name": "Interior Totem",
+            "windowDimensions": [
+                2160,
+                3840
+            ],
+            "windowPosition": [
+                0,
+                0
+            ]
+        },
+        "vitrine2x4": {
+            "contentDimensions": [
+                3840,
+                4320
+            ],
+            "contentPosition": [
+                0,
+                0
+            ],
+            "name": "Vitrine 2x4",
+            "windowDimensions": [
+                3840,
+                4320
+            ],
+            "windowPosition": [
+                0,
+                0
+            ]
+        },
+        "vitrine3x2": {
+            "contentDimensions": [
+                5760,
+                2160
+            ],
+            "contentPosition": [
+                0,
+                0
+            ],
+            "name": "Vitrine 3x2",
+            "windowDimensions": [
+                7680,
+                2160
+            ],
+            "windowPosition": [
+                0,
+                0
+            ]
+        },
+        "vitrine3x3": {
+            "contentDimensions": [
+                3840,
+                2160
+            ],
+            "contentPosition": [
+                0,
+                0
+            ],
+            "name": "Vitrine 3x3",
+            "windowDimensions": [
+                3840,
+                2160
+            ],
+            "windowPosition": [
+                0,
+                0
+            ]
+        }
+    },
+    "PreviewPlayer": {
+        "reactivationInterval": 2
+    },
+    "Scheduler": {
+        "defaultTimeOffset": -18000,
+        "lookahead": 20,
+        "maxEnqueueDuration": 0.005,
+        "minLiveDurationFraction": 0.25,
+        "minOverlapDuration": 1,
+        "packetProcessingLimit": 100
+    },
+    "Stats": {
+        "statusFile": "/var/fsplayer/stats/status.json",
+        "updateStatusInterval": 5
+    },
+    "Textures": {
+        "defaultProgerssiveUploadChunkSize": 8294400,
+        "hudsonYardsLogoNoTradeMark": "HudsonYards_Logo_NoTradeMark_2018_12_18.png"
+    },
+    "TransitionFactory": {
+        "DefaultTransition": {
+            "LiveDuration": {
+                "max": 30,
+                "min": 1,
+                "preferred": 10
+            },
+            "OverlapInDuration": {
+                "max": 5,
+                "min": 1,
+                "preferred": 2
+            },
+            "OverlapOutDuration": {
+                "max": 5,
+                "min": 1,
+                "preferred": 2
+            }
+        },
+        "GenericTransitions": {
+            "BetweenContent": {
+                "Crossfade": {
+                    "Default": {
+                        "duration": 2
+                    }
+                },
+                "FadeInAndOut": {
+                    "fadeInDuration": 2,
+                    "fadeOutDuration": 2,
+                    "opaqueDuration": 1
+                }
+            },
+            "FromNothing": {
+                "FadeInAndOut": {
+                    "fadeInDuration": 0,
+                    "fadeOutDuration": 2,
+                    "opaqueDuration": 0
+                }
+            },
+            "ToNothing": {
+                "FadeInAndOut": {
+                    "fadeInDuration": 2,
+                    "fadeOutDuration": 0,
+                    "opaqueDuration": 0
+                }
+            }
+        }
+    },
+    "Transitions": {
+        "Blinds": {
+            "BlockAnimation": {
+                "bias": 0.4125,
+                "gain": 0.4,
+                "lengthFrac": 0.65
+            },
+            "Camera": {
+                "clipPlanes": [
+                    10,
+                    15000
+                ]
+            },
+            "Constraints": {
+                "LiveDuration": {
+                    "min": 2,
+                    "preferredMax": 10,
+                    "preferredMin": 5
+                }
+            },
+            "Text": {
+                "scrollBias": 200,
+                "scrollGain": 400
+            },
+            "lightingMin": 0.3,
+            "marqueeNE": {
+                "numBlocks": [
+                    6,
+                    12
+                ],
+                "vfov": 70
+            },
+            "marqueeSE": {
+                "numBlocks": [
+                    4,
+                    8
+                ],
+                "vfov": 70
+            },
+            "preRollDuration": 2,
+            "shadowStrength": 0.6,
+            "totemExterior": {
+                "numBlocks": [
+                    6,
+                    10
+                ],
+                "vfov": 75
+            },
+            "totemInterior": {
+                "numBlocks": [
+                    8,
+                    12
+                ],
+                "vfov": 60
+            },
+            "vitrine2x4": {
+                "numBlocks": [
+                    12,
+                    20
+                ],
+                "vfov": 25
+            },
+            "vitrine3x2": {
+                "numBlocks": [
+                    16,
+                    26
+                ],
+                "vfov": 60
+            },
+            "vitrine3x3": {
+                "numBlocks": [
+                    16,
+                    26
+                ],
+                "vfov": 50
+            }
+        },
+        "Crossfade": {
+            "Constraints": {
+                "LiveDuration": {
+                    "preferredMax": 4,
+                    "preferredMin": 2
+                }
+            }
+        },
+        "DoubleTwister": {
+            "BlockAnimation": {
+                "bias": 0.4125,
+                "gain": 0.7,
+                "lengthFrac": 0.65
+            },
+            "Camera": {
+                "clipPlanes": [
+                    10,
+                    15000
+                ]
+            },
+            "Constraints": {
+                "LiveDuration": {
+                    "min": 2,
+                    "preferredMax": 10,
+                    "preferredMin": 5
+                }
+            },
+            "Text": {
+                "scrollBias": 200,
+                "scrollGain": 400
+            },
+            "marqueeNE": {
+                "numBlocks": 18,
+                "vfov": 70
+            },
+            "marqueeSE": {
+                "numBlocks": 18,
+                "vfov": 70
+            },
+            "preRollDuration": 2,
+            "totemExterior": {
+                "numBlocks": 18,
+                "vfov": 75
+            },
+            "totemInterior": {
+                "numBlocks": 18,
+                "vfov": 60
+            },
+            "vitrine2x4": {
+                "numBlocks": 14,
+                "vfov": 25
+            },
+            "vitrine3x2": {
+                "numBlocks": 20,
+                "vfov": 60
+            },
+            "vitrine3x3": {
+                "numBlocks": 20,
+                "vfov": 50
+            }
+        },
+        "Flipboard": {
+            "BlockAnimation": {
+                "bias": 0.5,
+                "gain": 0.65,
+                "lengthFrac": [
+                    0.4,
+                    0.6
+                ]
+            },
+            "Camera": {
+                "clipPlanes": [
+                    100,
+                    10000
+                ]
+            },
+            "duration": 4,
+            "marqueeNE": {
+                "numTabsX": [
+                    6,
+                    12
+                ],
+                "numTabsY": [
+                    12,
+                    20
+                ],
+                "vfov": 50
+            },
+            "marqueeSE": {
+                "numTabsX": [
+                    5,
+                    13
+                ],
+                "numTabsY": [
+                    13,
+                    21
+                ],
+                "vfov": 40
+            },
+            "tabThickness": 20,
+            "totemExterior": {
+                "numTabsX": [
+                    7,
+                    12
+                ],
+                "numTabsY": [
+                    12,
+                    17
+                ],
+                "vfov": 50
+            },
+            "totemInterior": {
+                "numTabsX": [
+                    7,
+                    13
+                ],
+                "numTabsY": [
+                    13,
+                    19
+                ],
+                "vfov": 50
+            },
+            "vitrine2x4": {
+                "numTabsX": [
+                    7,
+                    9
+                ],
+                "numTabsY": [
+                    9,
+                    13
+                ],
+                "vfov": 25
+            },
+            "vitrine3x2": {
+                "numTabsX": [
+                    7,
+                    12
+                ],
+                "numTabsY": [
+                    12,
+                    20
+                ],
+                "vfov": 25
+            },
+            "vitrine3x3": {
+                "numTabsX": [
+                    7,
+                    10
+                ],
+                "numTabsY": [
+                    7,
+                    10
+                ],
+                "vfov": 40
+            }
+        },
+        "Twister": {
+            "BlockAnimation": {
+                "bias": 0.4125,
+                "gain": 0.7,
+                "lengthFrac": 0.65
+            },
+            "Camera": {
+                "clipPlanes": [
+                    10,
+                    15000
+                ]
+            },
+            "Constraints": {
+                "LiveDuration": {
+                    "min": 2,
+                    "preferredMax": 10,
+                    "preferredMin": 5
+                }
+            },
+            "Text": {
+                "scrollBias": 200,
+                "scrollGain": 400
+            },
+            "marqueeNE": {
+                "numBlocks": 15,
+                "vfov": 70
+            },
+            "marqueeSE": {
+                "numBlocks": 15,
+                "vfov": 70
+            },
+            "preRollDuration": 2,
+            "totemExterior": {
+                "numBlocks": 10,
+                "vfov": 75
+            },
+            "totemInterior": {
+                "numBlocks": 12,
+                "vfov": 60
+            },
+            "vitrine2x4": {
+                "numBlocks": 10,
+                "vfov": 25
+            },
+            "vitrine3x2": {
+                "numBlocks": 20,
+                "vfov": 60
+            },
+            "vitrine3x3": {
+                "numBlocks": 20,
+                "vfov": 50
+            }
+        },
+        "Waves": {
+            "BlockAnimation": {
+                "bias": 0.7,
+                "gain": 0.3,
+                "lengthFrac": [
+                    0.7,
+                    0.9
+                ],
+                "twistFrac": [
+                    0.1,
+                    0.2
+                ]
+            },
+            "Camera": {
+                "_vfov": 34,
+                "clipPlanes": [
+                    10,
+                    10000
+                ],
+                "vfov": 80
+            },
+            "amplitude": [
+                20,
+                30
+            ],
+            "frequency": [
+                0.8,
+                2.0
+            ],
+            "numWaves": {
+                "value": [
+                    7,
+                    15
+                ]
+            },
+            "pointsPerRow": 100,
+            "waveBlockDepth": [
+                20,
+                50
+            ],
+            "wireframeMode": {
+                "type": "bool",
+                "value": false
+            },
+            "xscale": {
+                "_value": 0.85,
+                "range": [
+                    0.8,
+                    1.2
+                ],
+                "type": "float",
+                "value": 1.0315
+            }
+        }
+    },
+    "UserInput": {
+        "enableMouse": false,
+        "enableTouch": false
+    },
+    "Viewer": {
+        "Background": {
+            "enabled": false
+        },
+        "CustomInitialView": {
+            "position": [
+                0,
+                0
+            ],
+            "scale": 1
+        },
+        "Motion": {
+            "Scale": {
+                "acceleration": 2,
+                "scrollSpeed": 0.05,
+                "speedLimit": 10
+            },
+            "Translate": {
+                "acceleration": 2000,
+                "speedLimit": 6000
+            },
+            "enabled": false
+        },
+        "initialView": "Pure",
+        "margins": [
+            200,
+            200
+        ]
+    },
+    "Window": {
+        "allowMinimisation": true,
+        "decorations": false,
+        "dimensions": [
+            1920,
+            1080
+        ],
+        "frameRate": {
+            "range": [
+                24,
+                120
+            ],
+            "type": "float",
+            "value": 60
+        },
+        "fullscreen": false,
+        "position": [
+            0,
+            0
+        ],
+        "resizable": false,
+        "showCursor": false,
+        "stealFocus": false,
+        "syncBars": {
+            "colour": {
+                "value": [
+                    1,
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "enable": {
+                "type": "bool",
+                "value": false
+            },
+            "orientation": {
+                "options": [
+                    "none",
+                    "horizontal",
+                    "vertical",
+                    "both"
+                ],
+                "type": "radio",
+                "value": 3
+            },
+            "speed": {
+                "range": [
+                    0.001,
+                    1
+                ],
+                "type": "vec2",
+                "value": [
+                    0.2,
+                    0.1
+                ]
+            },
+            "width": {
+                "range": [
+                    1,
+                    100
+                ],
+                "type": "vec2",
+                "value": [
+                    10,
+                    10
+                ]
+            }
+        },
+        "title": "Framestore Player",
+        "topMost": false,
+        "vSyncInterval": {
+            "comment": "The minimum number of screen updates to wait for until the buffers are swapped by glfwSwapBuffers.",
+            "type": "int",
+            "value": 1
+        }
+    },
+    "files": [
+        "../../dev/hudsonYards/fsplayer/deploy/config/transitions/transitionWaves.json"
+    ],
+    "nuber": {
+        "graphicsGL": {
+            "Texture": {
+                "defaultUploadMethod": "PBO"
+            }
+        }
+    },
+    "root": "../../dev/hudsonYards/fsplayer/deploy/config",
+    "title": ""
+}

@@ -1,0 +1,11 @@
+- type: log
+  paths:
+    - /opt/testlog/syslog
+  fields:
+    env: dev
+    type: syslog
+    location: chancery
+  backoff: 0.05s
+  max_backoff: 1s
+  ignore_older: 30m
+  tail_files: true
