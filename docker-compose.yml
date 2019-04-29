@@ -7,7 +7,7 @@ services:
       - "5044:5045"
       - "514:5144"
     volumes:
-      - ./my_pipeline.conf:/usr/share/logstash/config/pipeline.conf:ro
+      - ./my-pipelines/test-pipeline.conf:/usr/share/logstash/config/pipeline.conf:ro
     command: >
       --config.reload.automatic
       --path.config /usr/share/logstash/config/pipeline.conf
